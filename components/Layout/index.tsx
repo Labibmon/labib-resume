@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Head from 'next/head'
+import Navbar from 'components/Navbar'
 
 type LayoutPropType = {
 }
@@ -20,6 +21,7 @@ const Layout: FC<LayoutPropType> = ({
         />
       </Head>
       <main>
+        <Navbar/>
         {children}
       </main>
     </>

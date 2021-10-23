@@ -1,5 +1,17 @@
 @import '../utils/variables';
 
-.text {
-  color: $black-1;
+.home {
+  &_wrapper {
+    padding: 0 10px 10px;
+  }
+
+  &_container {
+    @include flex(row, center, space-between);
+    width: 100%;
+
+    &>div {
+      width: calc(50% - 5px);
+      background-color: $white-0;
+    }
+  }
 }

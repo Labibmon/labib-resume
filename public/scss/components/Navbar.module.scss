@@ -1,0 +1,43 @@
+@import '../utils/variables';
+
+.navbar {
+  &_wrapper {
+    padding: 10px;
+  }
+
+  &_container {
+    background-color: $white-0;
+    padding: 12px;
+  }
+
+  &_linkItems {
+    @include flex(row, center, flex-start);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &_linkItem {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &>a {
+      @include typographyBuilder(600, 16, 18);
+      letter-spacing: 4px;
+      color: $black-0;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &[class*="active"] {
+      &>a {
+        // text-decoration: underline;
+      }
+    }
+  }
+}
